@@ -1083,7 +1083,7 @@ impl super::Queue {
                     // Prefer `clear` as `clear_buffer` functions have issues on Sandy Bridge
                     // on Windows.
                     unsafe {
-                        gl.draw_buffers(&[glow::COLOR_ATTACHMENT0 + draw_buffer]);
+                        gl.draw_buffers(&[glow::COLOR + draw_buffer]);
                         gl.clear_color(color[0], color[1], color[2], color[3]);
                         gl.clear(glow::COLOR_BUFFER_BIT);
                     }
